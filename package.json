@@ -1,5 +1,6 @@
 {
-  "name": "realtime-weather-app",
+  "name": "weather-forecast",
+  "homepage": "https://MarcoLin1.github.io/weather-forecast",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "dayjs": "^1.11.3",
     "dotenv": "^16.0.1",
     "emotion-theming": "^11.0.0",
+    "gh-pages": "^4.0.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
