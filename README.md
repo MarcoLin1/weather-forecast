@@ -11,6 +11,9 @@ A practical web application to build up by React.js for user to check weather fo
 - user can change the mode in dark or light
 - mode changed that will depend on right now time
 
+![](https://i.imgur.com/H72zYej.png)
+![](https://i.imgur.com/ZTL8IPW.png)
+
 ### `npm start`
 
 Runs the app in the development mode.\
