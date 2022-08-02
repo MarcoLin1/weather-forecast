@@ -3,6 +3,8 @@ import { ReactComponent as AirFlowIcon } from '../images/airFlow.svg'
 import { ReactComponent as RefreshIcon } from '../images/refresh.svg'
 import { ReactComponent as LoadingIcon } from '../images/loading.svg'
 import { ReactComponent as CogIcon } from '../images/cog.svg'
+import { ReactComponent as LightModeIcon } from '../images/light-mode.svg'
+import { ReactComponent as DarkModeIcon } from '../images/dark-mode.svg'
 import WeatherIcon from "../components/WeatherIcon";
 import React from "react";
 import styled from "@emotion/styled";
@@ -101,17 +103,35 @@ const Refresh = styled.div`
 
 const Cog = styled(CogIcon)`
   position: absolute;
-  top: 30px;
+  top: 15px;
   right: 15px;
   width: 15px;
   height: 15px;
   cursor: pointer;
 `
 
+const LightMode = styled(LightModeIcon)`
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`
+
+const DarkMode = styled(DarkModeIcon)`
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`
+
 const WeatherCard = ({ 
   weatherElement, 
   fetchData, 
-  changeThemeClick, 
+  handleChangeTheme, 
   currentTheme, 
   handleCurrentPage, 
   cityName
@@ -158,7 +178,8 @@ const WeatherCard = ({
       }).format(dayjs(observationTime))}
       {isLoading ? <LoadingIcon /> : <RefreshIcon />}
     </Refresh>
-    <div onClick={changeThemeClick(currentTheme)}>Change Color</div>
+    {currentTheme === 'light' && <LightMode onClick={handleChangeTheme(currentTheme)}/>}
+    {currentTheme === 'dark' && <DarkMode onClick={handleChangeTheme(currentTheme)}/>}
   </WeatherCardWrapper>
   )
 }

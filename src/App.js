@@ -57,7 +57,7 @@ function App() {
     authorizationKey: authorizationKey 
   })
 
-  const changeThemeClick = (type) => {
+  const handleChangeTheme = (type) => {
     return () => type === 'light' ? setCurrentTheme('dark') : setCurrentTheme('light')
   }
 
@@ -83,7 +83,7 @@ function App() {
             weatherElement={weatherElement}
             fetchData={fetchData}
             currentTheme={currentTheme}
-            changeThemeClick={changeThemeClick}
+            handleChangeTheme={handleChangeTheme}
             handleCurrentPage={handleCurrentPage}
           />
         )}
